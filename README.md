@@ -58,10 +58,10 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::443370672158:role/ivanf-node-group-1-eks-node-group-20250122091604025100000001
+      rolearn: arn:aws:iam::4433xxx158:role/ivanf-node-group-1-eks-node-group-202501220xxxx01
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::443370672158:user/alex_b
+    - userarn: arn:aws:iam::4433xxx58:user/alex_b
       username: alex_b
       groups:
         - system:masters
