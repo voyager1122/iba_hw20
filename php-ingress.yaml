@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: php-ingress
+  annotations:
+    
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: a6abb6da5ff6d4726bdf54e9192e9c0e-975673584.us-east-1.elb.amazonaws.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: php-service
+                port:
+                  number: 80
