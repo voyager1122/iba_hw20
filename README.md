@@ -2,9 +2,10 @@
 
 ## HW20. Deploy php app in AWS EKS, install ingress controller, grant an access for IAM user
 
-Docker image with test PHP page is build on push using gihub actions. Docker image finally published on hub.docker.com as voyager1122/php:latest
+Docker image with test PHP page is build on git push using gihub actions.
+Image published on hub.docker.com as voyager1122/php:latest
 
-used to be deployed in AWS EKS cluster.
+It's used later to be deployed in AWS EKS cluster.
 
 [PHP app docker image](https://github.com/voyager1122/iba_php_docker_image)
 
@@ -20,7 +21,8 @@ used to be deployed in AWS EKS cluster.
 
 Next step is deploy app in EKS
 
-
+[php-deployment.yaml](https://github.com/voyager1122/iba_hw20/blob/main/php-deployment.yaml)
+[php-ingress.yaml](https://github.com/voyager1122/iba_hw20/blob/main/php-ingress.yaml)
 
 ```bash
 sudo kubectl apply -f php-deployment.yaml
@@ -53,7 +55,7 @@ Check users ARN in AWS console and add it to mapUsers section:
 Result:
 
 
-```bash
+```yaml
 sudo kubectl get configmap -n kube-system aws-auth -o yaml
 apiVersion: v1
 data:
