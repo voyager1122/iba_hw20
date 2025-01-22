@@ -15,6 +15,8 @@ used to be deployed in AWS EKS cluster.
 
 ![screenshot](./lens_ingress2.png)
 
+![screenshot](./lens_ingress3.png)
+
 
 Next step is deploy app in EKS
 
@@ -25,6 +27,7 @@ sudo kubectl apply -f php-deployment.yaml
 sudo kubectl apply -f php-ingress.yaml 
 ```
 
+![screenshot](./php-app.png)
 
 ###  Grant access for IAM user to AWS EKS cluster
 
